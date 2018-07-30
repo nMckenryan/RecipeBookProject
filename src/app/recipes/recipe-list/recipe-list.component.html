@@ -1,0 +1,20 @@
+<!-- <app-recipe-item></app-recipe-item> -->
+<!-- Handles the list of recipes. Contains the Recipe Items. Located on the left side alongside recipe detail component -->
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">Add New Recipe</button>
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <a href="#" class="list-group-item clearfix" *ngFor= "let recipe of recipes">
+        <div class="pull-right">
+            <img [src]="recipe.imgPath" alt="{{ recipe.name }}" class="img-responsive" style="max-height: 50px">
+        </div>
+        <div class="pull-left"> 
+            <!-- TO DO: Pull <p> tag to fill div, for longer text. -->
+            <h5 class="list-group-heading">{{ recipe.name }}</h5> 
+            <p class = "list-group-item"> {{ recipe.description }}</p>
+        </div>
